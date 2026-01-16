@@ -82,7 +82,6 @@ const FilterPanel = memo(function FilterPanel({
               />
             </div>
           </div>
-
           <div className="filter-group">
             <label className="filter-label">Minimum Rating</label>
             <div className="filter-rating">
@@ -110,3 +109,4 @@ const FilterPanel = memo(function FilterPanel({
 });
 
 export default FilterPanel;
+
