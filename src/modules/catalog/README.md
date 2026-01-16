@@ -2,7 +2,6 @@
 
 A high-performance, customer-facing product catalog component built with React, advanced filtering, debounced search, sorting, and infinite scrolling capabilities
 ---
-
 ##  How to Understand the Flow (Beginner Guide)
 
 ### Step-by-Step Data Flow
@@ -309,3 +308,4 @@ This project satisfies the following requirements:
 - Infinite scrolling
 - Optimized rendering using memoization and batching
 - Clear loading, error, and empty states
+
