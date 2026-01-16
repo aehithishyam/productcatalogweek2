@@ -44,7 +44,6 @@ export function useProducts() {
 
   useEffect(() => {
     fetchProducts();
-
     return () => {
       if (abortControllerRef.current) {
         abortControllerRef.current.abort();
@@ -54,3 +53,4 @@ export function useProducts() {
 
   return { products, categories, isLoading, error, refetch: fetchProducts };
 }
+
