@@ -5,6 +5,7 @@ interface NotificationProps {
 }
 
 function Notification({ message, type, onClose }: NotificationProps) {
+  
   return (
     <div className={`notification ${type}`}>
       <div className="notification-icon">
@@ -19,3 +20,4 @@ function Notification({ message, type, onClose }: NotificationProps) {
 }
 
 export default Notification;
+
