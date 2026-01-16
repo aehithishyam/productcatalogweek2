@@ -7,6 +7,7 @@ interface ProductGridProps {
 }
 
 const ProductGrid = memo(function ProductGrid({ products }: ProductGridProps) {
+  
   return (
     <div className="product-grid">
       {products.map((product) => (
@@ -17,3 +18,4 @@ const ProductGrid = memo(function ProductGrid({ products }: ProductGridProps) {
 });
 
 export default ProductGrid;
+
