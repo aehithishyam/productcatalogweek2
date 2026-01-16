@@ -30,6 +30,6 @@ export function useInfiniteScroll(onLoadMore: () => void, hasMore: boolean) {
     },
     [hasMore, onLoadMore]
   );
-
   return triggerRef;
 }
+
