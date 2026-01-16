@@ -19,7 +19,6 @@ interface ProductCatalogPageProps {
 
 function ProductCatalogPage({ showNotification }: ProductCatalogPageProps) {
   const { products, categories, isLoading, error, refetch } = useProducts();
-
   const [filters, setFilters] = useState<ProductFilters>(DEFAULT_FILTERS);
   const [visibleCount, setVisibleCount] = useState(ITEMS_PER_BATCH);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
@@ -50,9 +49,7 @@ function ProductCatalogPage({ showNotification }: ProductCatalogPageProps) {
     setFilters(prev => ({ ...prev, sortOrder: value as ProductFilters['sortOrder'] }));
   }, []);
 
-  // -------------------------
   // Filtering + sorting
-  // -------------------------
 
   const filteredProducts = useMemo(() => {
     let result = [...products];
@@ -101,9 +98,7 @@ function ProductCatalogPage({ showNotification }: ProductCatalogPageProps) {
     return result;
   }, [products, debouncedSearch, filters]);
 
-  // -------------------------
   // Infinite scroll logic
-  // -------------------------
 
   const visibleProducts = useMemo(() => {
     return filteredProducts.slice(0, visibleCount);
@@ -123,9 +118,7 @@ function ProductCatalogPage({ showNotification }: ProductCatalogPageProps) {
 
   const loadMoreRef = useInfiniteScroll(loadMore, hasMore);
 
-  // -------------------------
   // Error state
-  // -------------------------
 
   if (error) {
     showNotification('Failed to load products', 'error');
@@ -144,9 +137,7 @@ function ProductCatalogPage({ showNotification }: ProductCatalogPageProps) {
     );
   }
 
-  // -------------------------
   // Main render
-  // -------------------------
 
   return (
     <div className="catalog-page">
@@ -227,3 +218,4 @@ function ProductCatalogPage({ showNotification }: ProductCatalogPageProps) {
 }
 
 export default ProductCatalogPage;
+
