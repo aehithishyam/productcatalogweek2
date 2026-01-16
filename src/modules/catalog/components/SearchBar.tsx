@@ -25,5 +25,5 @@ const SearchBar = memo(function SearchBar({ value, onChange, placeholder = 'Sear
     </div>
   );
 });
-
 export default SearchBar;
+
