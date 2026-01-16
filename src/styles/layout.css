@@ -10,7 +10,6 @@
 .header {
   grid-area: header;
   height: var(--header-height);
-
   /* Two color shades + image */
   background:
     linear-gradient(
@@ -121,3 +120,4 @@
     padding: 0 var(--spacing-lg);
   }
 }
+
