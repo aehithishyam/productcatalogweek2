@@ -28,6 +28,7 @@ const ProductCard = memo(function ProductCard({ product }: ProductCardProps) {
         <h3 className="product-card-title">{product.title}</h3>
         <p className="product-card-brand">{product.brand}</p>
         <div className="product-card-rating">
+          //Rating
           <span className="product-card-stars">
             {'★'.repeat(Math.round(product.rating))}
             {'☆'.repeat(5 - Math.round(product.rating))}
@@ -55,3 +56,4 @@ const ProductCard = memo(function ProductCard({ product }: ProductCardProps) {
 });
 
 export default ProductCard;
+
